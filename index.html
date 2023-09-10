@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Application</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+
+    <header>
+      <div class="nav container1">
+        <a href="#" onclick="reload()" class="logo">
+          <img
+            src="./images/image.png"
+            alt="company logo"/>
+        </a>
+        <h2>News Milegi Yahi</h2>
+        <div class="nav-icons">
+
+            <div class="menu-icon">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+         
+
+        <div class="menu">
+          <img src="images/image.png" alt="Menu">
+          <div class="navbar">
+            
+              <ul class="flex1">
+                <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                <li class="hover-link nav-item" id="Politics" onclick="onNavItemClick('politics')">Politics</li>
+              </ul>
+            
+            <div class="search-bar flex">
+              <input id="search-text" type="text" class="news-input" placeholder="e.g. Science" />
+              <button id="search-button" class="search-button">Search</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+
+
+    <main>
+        <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title" >This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi aliquam voluptate, at ea nemo expedita ex in vitae dicta necessitatibus?</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
